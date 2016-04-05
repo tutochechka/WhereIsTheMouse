@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/first"
+    tools:context="com.gazina.sveta.whereisthemouse.MainActivity">
+
+    <Button
+        android:id="@+id/four"
+        android:text="4x4"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="174dp" />
+
+    <Button
+        android:id="@+id/five"
+        android:text="5X5"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"
+        android:layout_marginTop="50dp"
+        android:layout_alignTop="@+id/four"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/six"
+        android:text="6X6"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"
+        android:layout_below="@+id/five"
+        android:layout_alignLeft="@+id/five"
+        android:layout_alignStart="@+id/five" />
+</RelativeLayout>

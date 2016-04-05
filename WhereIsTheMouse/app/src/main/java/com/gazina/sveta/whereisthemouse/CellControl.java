@@ -6,7 +6,7 @@ import java.util.Random;
  * Created by Sveta on 5/23/2016.
  */
 public class CellControl {
-    private int size = 5;
+    private static int size = 5;
     private int gameField [][] = new int[size][size];
 
     public int[][] getGameField() {
@@ -22,9 +22,12 @@ public class CellControl {
     public int getSize() {
         return size;
     }
-    public void setNewGame(){
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+    public void setNewGame(int number){
+        size = number;
+        gameField = new int[size][size];
+
+        for (int i = 0; i < size-1; i++) {
+            for (int j = 0; j < size-1; j++) {
                 gameField[i][j] = 0;
             }
         }
@@ -45,7 +48,7 @@ public class CellControl {
                 return R.drawable.n;
             }
         }
-        for (int i = row + 1; i < size; i++) {
+        for (int i = row + 1; i < size-1; i++) {
             if (gameField[i][column] == 1){
                 return R.drawable.s;
             }
@@ -55,7 +58,7 @@ public class CellControl {
                 return R.drawable.w;
             }
         }
-        for (int i = column + 1; i < size; i++) {
+        for (int i = column + 1; i < size-1; i++) {
             if (gameField[row][i] == 1){
                 return R.drawable.e;
             }
@@ -71,7 +74,7 @@ public class CellControl {
 
         }
         j = column;
-        for (int i = row + 1; i < size ; i++) {
+        for (int i = row + 1; i < size-1 ; i++) {
             j--;
             if (j >= 0 && gameField[i][j] == 1) {
                 return R.drawable.sw;
@@ -89,7 +92,7 @@ public class CellControl {
         }
 
         j = column;
-        for (int i = row + 1; i < size ; i++) {
+        for (int i = row + 1; i < size-1 ; i++) {
             j++;
             if (j < size && gameField[i][j] == 1) {
                 return R.drawable.se;

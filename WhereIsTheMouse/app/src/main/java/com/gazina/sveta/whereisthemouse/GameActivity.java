@@ -17,7 +17,8 @@ public class GameActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        control.setNewGame();
+        int number = getIntent().getIntExtra("size",control.getSize());
+        control.setNewGame(number);
 
         GridView gridview = (GridView) findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this, control.getSize() * control.getSize()));
@@ -56,7 +57,7 @@ public class GameActivity extends AppCompatActivity {
 
                 // Start NewActivity.class
                 Intent myIntent = new Intent(GameActivity.this,
-                        GameActivity.class);
+                        MainActivity.class);
                 startActivity(myIntent);
             }
 
