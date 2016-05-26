@@ -1,14 +1,12 @@
 package com.gazina.sveta.whereisthemouse;
 
+import java.util.Random;
+
 /**
  * Created by Sveta on 5/23/2016.
  */
 public class CellControl {
-    public int getSize() {
-        return size;
-    }
-
-    private int size = 5;
+    private int size = 3;
     private int gameField [][] = new int[size][size];
 
     public int[][] getGameField() {
@@ -21,13 +19,19 @@ public class CellControl {
         return position%size;
     }
 
+    public int getSize() {
+        return size;
+    }
     public void setNewGame(){
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 gameField[i][j] = 0;
             }
         }
-        gameField[2][2] = 1;
+        Random rand = new Random();
+        int i = rand.nextInt(size);
+        int j = rand.nextInt(size);
+        gameField[i][j] = 1;
 
     }
     public int getCellType(int row, int column){

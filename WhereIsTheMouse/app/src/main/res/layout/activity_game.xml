@@ -11,12 +11,25 @@
         android:text="Find the mouse!"
         android:paddingLeft="200px"
         />
+    <Button
+        android:id="@+id/new_game"
+        android:layout_width="80px"
+        android:layout_height="20px"
+        android:onClick="sendMessage"
+        android:text="New Game"
+        />
+    <Button
+        android:id="@+id/back"
+        android:layout_width="80px"
+        android:layout_height="20px"
+        android:text="Back"
+        />
+
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/gridview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnWidth="30dp"
-        android:numColumns="5"
         android:verticalSpacing="1px"
         android:horizontalSpacing="1px"
         android:stretchMode="columnWidth"

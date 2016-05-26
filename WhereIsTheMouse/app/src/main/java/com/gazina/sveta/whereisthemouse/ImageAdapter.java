@@ -7,14 +7,19 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created by Sveta on 5/23/2016.
  */
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
 
-    public ImageAdapter(Context c) {
+    public ImageAdapter(Context c, int size) {
         mContext = c;
+        mThumbIds = new Integer[size];
+        Arrays.fill(mThumbIds, R.drawable.closed);
     }
 
     public int getCount() {
@@ -47,20 +52,5 @@ public class ImageAdapter extends BaseAdapter {
     }
 
     // references to our images
-    private Integer[] mThumbIds =
-    {
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-            R.drawable.closed, R.drawable.closed,
-
-    };
+    private Integer[] mThumbIds = {};
 }
