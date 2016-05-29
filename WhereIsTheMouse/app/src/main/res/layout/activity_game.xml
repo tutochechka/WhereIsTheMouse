@@ -6,35 +6,53 @@
     android:background="@color/back">
     <TextView
         android:layout_width="900px"
-        android:layout_height="150px"
+        android:layout_height="wrap_content"
         android:textSize="90px"
         android:text="Find the mouse!"
         android:paddingLeft="200px"
         />
-    <Button
-        android:id="@+id/new_game"
-        android:layout_width="80px"
-        android:layout_height="20px"
-        android:onClick="sendMessage"
-        android:text="New Game"
+    <TextView
+        android:layout_width="1000px"
+        android:layout_height="wrap_content"
+        android:textSize="50px"
+        android:text="It is right behind the square."
+        android:paddingLeft="200px"
         />
-    <Button
-        android:id="@+id/back"
-        android:layout_width="80px"
-        android:layout_height="20px"
-        android:text="Back"
-        />
+
 
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/gridview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="386dp"
         android:columnWidth="30dp"
         android:verticalSpacing="1px"
         android:horizontalSpacing="1px"
         android:stretchMode="columnWidth"
         android:gravity="center"
         />
+    <GridLayout
+        android:id="@+id/gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="New Game"
+            android:id="@+id/new_game"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/back"
+            android:layout_row="0"
+            android:layout_column="10" />
+    </GridLayout>
 
 
 </LinearLayout>

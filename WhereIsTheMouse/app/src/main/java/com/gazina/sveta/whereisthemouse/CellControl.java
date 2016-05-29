@@ -6,7 +6,7 @@ import java.util.Random;
  * Created by Sveta on 5/23/2016.
  */
 public class CellControl {
-    private int size = 3;
+    private int size = 5;
     private int gameField [][] = new int[size][size];
 
     public int[][] getGameField() {

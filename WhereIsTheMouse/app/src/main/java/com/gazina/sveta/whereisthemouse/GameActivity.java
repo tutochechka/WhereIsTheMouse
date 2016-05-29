@@ -33,11 +33,35 @@ public class GameActivity extends AppCompatActivity {
                 imageView.setImageResource(control.getCellType(control.getRow(position), control.getColumn(position)));
 
 
-
             }
         });
 
+        // Locate the button in activity_game.xml
+        Button newGameButton = (Button) findViewById(R.id.new_game);
+        Button BackButton = (Button) findViewById(R.id.back);
 
+        // Capture button clicks
+        newGameButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(GameActivity.this,
+                        GameActivity.class);
+                startActivity(myIntent);
+            }
+
+        });
+        BackButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+
+                // Start NewActivity.class
+                Intent myIntent = new Intent(GameActivity.this,
+                        GameActivity.class);
+                startActivity(myIntent);
+            }
+
+        });
     }
+
 
 }
